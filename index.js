@@ -1,4 +1,5 @@
 const express = require('express')
+require('dotenv').config()
 const app = express()
 const server = require('http').createServer(app)
 const cors = require('cors')
@@ -45,8 +46,8 @@ app.get('/showmsg:id', showMessage)
 
 
  
-
+const PORT = process.env.PORT || 8080
 
 server.listen(8080, ()=>{
-    console.log('Server Listening on port 8080')
+    console.log('Server Listening on port '+PORT)
 })
