@@ -7,25 +7,25 @@ const friendRoom = require('../models/friends')
 const jwt = require('jsonwebtoken')
 const secreteKey = 'HOvaFrEVzpZC6Y5sdBr+iqaoHFQppFYbVhvJitELvkcbT+HhGj6aqaTZacMi'
  
-exports.saveFile = async (req, res)=>{
-    const file = req.files.file
-   console.log(file)
-   const filename = crypto.randomBytes(15).toString('hex') + path.extname(file.name);
-   const newFile = new files({
-       filename: filename,
-       mimeType: file.mimetype,
-       data: file.data, 
+// exports.saveFile = async (req, res)=>{
+//     const file = req.files.file
+//    console.log(file)
+//    const filename = crypto.randomBytes(15).toString('hex') + path.extname(file.name);
+//    const newFile = new files({
+//        filename: filename,
+//        mimeType: file.mimetype,
+//        data: file.data, 
 
-   })
-   const saveFile = await newFile.save()
-   await userData.findByIdAndUpdate('61e5b7a5ea681ee3900f3497', {$push: {
+//    })
+//    const saveFile = await newFile.save()
+//    await userData.findByIdAndUpdate('61e5b7a5ea681ee3900f3497', {$push: {
        
-           filenames: saveFile.filename,
-           fileId: saveFile._id
+//            filenames: saveFile.filename,
+//            fileId: saveFile._id
        
-   }})
-   console.log(saveFile.filename)
-}
+//    }})
+//    console.log(saveFile.filename)
+// }
 
 exports.signup = async (req, res)=>{
    const email = req.body.phone

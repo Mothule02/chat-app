@@ -11,7 +11,7 @@ const cors = require('cors')
 const fileupload = require('express-fileupload')
 const { connection } = require('./models/database')
 const bodyParser = require('body-parser')
-const { saveFile, login, signup, streamFriends, Findfriends, Room, sendMessages, showMessage } = require('./controllers/functions')
+const { login, signup, streamFriends, Findfriends, Room, sendMessages, showMessage } = require('./controllers/functions')
 // const { indexSocket, loginSocket } = require('./controllers/sockets')
 app.use(cors())
 app.use(bodyParser.json())
@@ -24,7 +24,7 @@ conn = connection()
 
 // loginSocket(io)
 
-app.post('/',saveFile)
+
 
 
 app.get('/friends:token', streamFriends)
@@ -42,9 +42,7 @@ app.post('/sendmsg', sendMessages)
 app.get('/showmsg:id', showMessage)
 
 
-app.get('/files', (req, res)=>{
-    res.send('<h1>server running on port 8080</h1>')
-})
+
 
  
 
