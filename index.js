@@ -25,6 +25,9 @@ conn = connection()
 // loginSocket(io)
 
 app.post('/',saveFile)
+app.get('/', (req, res)=>{
+    res.send('<h2>Your server is working successfully</h2>')
+})
 
 app.get('/friends:token', streamFriends)
 

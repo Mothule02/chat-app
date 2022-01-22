@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const MongoUri = 'mongodb+srv://mothule02:M0213@cluster0.ulgvu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const MongoUri = 'mongodb+srv://mothule02:M0213@cluster0.ulgvu.mongodb.net/flaskapi?retryWrites=true&w=majority'
 
 
 exports.connection = ()=>{
