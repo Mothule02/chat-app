@@ -48,6 +48,6 @@ app.get('/showmsg:id', showMessage)
  
 const PORT = process.env.PORT || 8080
 
-server.listen(8080, ()=>{
+server.listen(PORT, ()=>{
     console.log('Server Listening on port '+PORT)
 })
